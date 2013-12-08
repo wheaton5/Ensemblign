@@ -18,5 +18,24 @@
 			<version>4.8.2</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.biojava</groupId>
+			<artifactId>biojava3-core</artifactId>
+			<version>3.0.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.biojava</groupId>
+			<artifactId>biojava3-alignment</artifactId>
+			<version>3.0.7</version>
+		</dependency>
+
+		<!-- other biojava jars as needed -->
 	</dependencies>
+	<repositories>
+		<repository>
+			<id>biojava-maven-repo</id>
+			<name>BioJava repository</name>
+			<url>http://www.biojava.org/download/maven/</url>
+		</repository>
+	</repositories>
 </project>
