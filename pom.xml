@@ -4,13 +4,19 @@
 
 	<groupId>com.heaton</groupId>
 	  
-	<artifactId>Ensemblign</artifactId>
+	<artifactId>Ensemble</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
-	<name>Maven Quick Start Archetype</name>
+	<name>Ensemblign parent project</name>
 	<url>http://maven.apache.org</url>
 	
+	<modules>
+		<module>Ensemblign</module>
+		<module>pairwise</module>
+		<module>multiple</module>
+	</modules>	
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>

@@ -1,0 +1,18 @@
+#! /bin/sh
+
+# find R home
+: ${R_HOME=`R RHOME`}
+if test -z "${R_HOME}"; then
+  echo "could not determine R_HOME"
+  exit 1
+fi
+RBIN="${R_HOME}/bin/R"
+
+R_JAVA_HOME=`"${RBIN}" CMD config JAVA_HOME`
+: ${JAVA_HOME="${R_JAVA_HOME}"}
+
+R_JAVA_LIBS=`"${RBIN}" CMD config JAVA_LIBS|sed 's/ERROR:.*//'`
+
+echo "JAVA_HOME:=$R_JAVA_HOME" > src/Makevars
+echo "JAVA_LIBS:=$R_JAVA_LIBS" | tee -a src/Makevars
+cat src/Makevars.in | tee -a src/Makevars

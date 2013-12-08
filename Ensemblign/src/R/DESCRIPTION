@@ -1,0 +1,11 @@
+Package: Ensemblign
+Type: Package
+Title: Bayesian posterior pairwise and multiple alignments
+Version: ${project.version}
+Date: ${build.timestamp}
+Depends: R (>= 2.10.0)
+Author: Haynes Heaton
+Maintainer: Haynes Heaton <william_heaton@alumni.brown.edu>
+Description: Ensemblign is a package implementing HMM style pairwise sequence alignment a la Durbin and Eddy and a novel multiple alignment based on monte carlo graph min cut Karger's algorithm
+License: file LICENSE
+LazyLoad: yes
